@@ -1,0 +1,47 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">特长爱好</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="award personalDetail">
+     <section>
+     	 <div class="resume-item selfitem">
+      	    	 <span class="fl">特长<i class="smallselect"> ( 选填 )</i></span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	 </div>
+     	<div class="ce-content">
+      	    	 <span>内容<i class="smallselect"> ( 选填 )</i></span>
+                 <textarea name="" rows="" cols="" maxlength="5" placeholder="可以进行详细的描述也可以不填写(不能超过2000字)"></textarea>
+      	         <em></em>
+      </div>
+     </section>
+     <section>
+     	<div class="resume-item selfitem">
+      	    	 <span class="fl">爱好<i class="smallselect"> ( 选填 )</i></span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	 </div>
+     	<div class="ce-content">
+      	    	 <span>内容<i class="smallselect"> ( 选填 )</i></span>
+                 <textarea name="" rows="" cols="" maxlength="5" placeholder="可以进行详细的描述也可以不填写(不能超过2000字)"></textarea>
+      	         <em></em>
+      	</div>
+     </section>
+      <div class="personalDetailbtn">
+      	 <button class="button button-balanced button-full">
+                                保存
+         </button>
+       </div> 
+  </main>
+
+
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>
+
+

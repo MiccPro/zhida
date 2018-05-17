@@ -1,0 +1,72 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">创建实习经验</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="personalDetail">
+      <section class="common">
+      	<ul class="resume-list">
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl"> 公司名称</span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl"> 入职时间</span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl"> 离职时间</span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl">行业类别</span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl">职能</span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl">部门<i class="smallselect">( 选填 )</i></span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	    <li class="resume-item selfitem">
+      			 <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">工作性质</div>
+                        <select>
+                           <option>全职</option>
+                           <option>实习</option>
+                           <option>兼职</option>
+                        </select>
+                    </label>
+
+                </div>
+      		</li>
+      	   </ul>
+      	<div class="ce-content">
+      	    <span>工作描述<i class="smallselect">( 选填 )</i></span>
+            <textarea name="" rows="" cols="" maxlength="5" placeholder="可以输入工作职责等(不能超过2000字)"></textarea>
+      	    <em></em>
+      	</div>
+      </section>
+       <div class="personalDetailbtn">
+      	 <button class="button button-balanced button-full">
+                                保存
+         </button>
+       </div> 
+
+  </main>
+
+
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>
+
+

@@ -1,0 +1,48 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">自我价值观测试</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="test">
+    <!--题型六：分值题：0-100--><!--自我价值观测试-->
+    <div class="page  page4 page6">
+      <div class="title bg_gray">测试一</div>
+      <p class="">
+        根据每题对你的最要程度，按照从0（不重要）到100（非常重要）的评分方法给每个题目打分。
+      </p>
+      <div class="content" ng-repeat=" h in list4">
+        <div class="container  clearfix">
+          <p class="fl">
+            {{$index+1}}. {{h.problem}}。
+          </p>
+          <input class="score fl" type="number" min="0" max="100"/>
+        </div>
+      </div>
+    </div>
+    <!--题型七：填空题--><!--自我价值观测试-->
+    <div class="page  page7">
+      <div class="title bg_gray">测试二</div>
+      <p>
+        请完成以下句子，以更深入了解自己的价值观。
+      </p>
+      <div class="content">
+        <ul class="container">
+          <li>如果我有500万，我将<input type="text"/> </li>
+          <li>我最关心的是<input type="text"/> </li>
+          <li>我最想得到的是<input type="text"/> </li>
+          <li>如果在一次大火中，我只能救出一件东西，那么它将是<input type="text"/> </li>
+        </ul>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="submit"> <button class="button btn-load white">提交</button></div>
+
+</ion-content>
+
+
+

@@ -1,0 +1,54 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">自我分析报告</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header">
+  <!-- 内容-->
+  <main class="summarize ">
+      <div class="list" ng-repeat="h in list">
+
+          <div class="item item-divider">
+              {{h.name}}：
+          </div>
+
+          <a class="item" >
+              {{h.result}}
+          </a>
+      </div>
+
+    <div>
+        <h4 class="item item-divider">我有哪些适合做的职位？</h4>
+        <div  class="container page">
+          <textarea type="text" ng-show="role==1||workList ==''"></textarea>
+           <div ng-show="workList" >
+               <span ng-repeat="h in workList" >{{h}}</span>
+           </div>
+        </div>
+    </div>
+    <div ng-show="role==1" class="submit"> <button class="button btn-load white">提交</button></div>
+
+      <!--审核-->
+      <ul class="container check">
+          <li>
+              <span>审核结果：</span>
+              <input type="radio" name="way" value="0" >通过
+              <input type="radio" name="way" value="1" style="margin-left: .5rem">不通过
+          </li>
+          <li class="clearfix">
+              <span class="fl">审核意见：</span>
+              <textarea class="fl"></textarea>
+          </li>
+          <li ng-show="role==2" class="submit">
+               <button class="button btn-load white">提交</button>
+          </li>
+      </ul>
+  </main>
+
+
+
+</ion-content>
+
+
+

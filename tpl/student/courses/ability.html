@@ -1,0 +1,44 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">职业能力测试</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="test">
+    <!--题型四：分值题：1-5 --><!--职业能力测试-->
+    <div class="page  page4 page8">
+      <div class="title bg_gray">职业能力倾向自我评定</div>
+      <p class="standard">
+        <span>强— 1分</span><span>较强— 2分</span>
+        <span>一般— 3分</span><span>较弱— 4分</span>
+        <span>弱— 5分</span>
+      </p>
+      <div class="content" ng-repeat=" h in list8">
+        <div class="container">
+          <p>
+            {{$index+1}}. {{h.problem}}
+          </p>
+          <div class="flex_j" ng-repeat="i in h.answer">
+            <p>({{$index+1}}) {{i}}</p>
+            <select data-tap-disabled="true">
+              <option value="">1</option>
+              <option value="">2</option>
+              <option value="">3</option>
+              <option value="">4</option>
+              <option value="">5</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <div class="submit"> <button class="button btn-load white">提交</button></div>
+
+
+</ion-content>
+
+
+

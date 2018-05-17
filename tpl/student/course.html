@@ -1,0 +1,38 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">我的课程</h1>
+</ion-header-bar>
+<ion-content class=" has-header has-footer">
+    <!-- 内容-->
+    <main class="course">
+        <ul class="list">
+            <li class="item " ng-click="jump('career')">
+                第一阶段：职业核心能力训练<i class="ion-ios-arrow-right fr"></i>
+            </li>
+            <li class="item " ng-click="jump('test')">
+                第二阶段：自我分析阶段<i class="ion-ios-arrow-right fr"></i>
+            </li>
+            <li class="item" ng-click="jump('report')">
+                第三阶段：职业体验阶段
+                <i class="ion-ios-arrow-right fr"></i>
+            </li>
+            <li class="item" ng-click="jump('resume')">
+                第四阶段：完成简历
+                <i class="ion-ios-arrow-right fr"></i>
+            </li>
+            <li class="item" ng-click="jump('check')">
+                四个阶段的审核记录
+                <i class="ion-ios-arrow-right fr"></i>
+            </li>
+        </ul>
+    </main>
+
+
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>
+

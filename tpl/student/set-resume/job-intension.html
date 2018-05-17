@@ -1,0 +1,77 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">求职意向</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="personalDetail">
+      <section class="common">
+      	<ul class="resume-list">
+      		<li class="resume-item selfitem">
+      			 <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">工作性质</div>
+                        <select>
+                           <option>全职</option>
+                           <option>实习</option>
+                           <option>兼职</option>
+                        </select>
+                    </label>
+
+                </div>
+      		</li>
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl"> 工作城市</span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl"> 从事行业</span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl"> 从事职业</span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	    <li class="resume-item selfitem">
+      	    	 <div class="list">
+                    <label class="item item-input item-select">
+                        <div class="input-label">期望月薪 <i style="font-size: 10px;">（税前）</i></div>
+                        <select>
+                           <option>1000以下</option>
+                           <option>1000~2000</option>
+                           <option>2000~3000</option>
+                           <option>3000~4000</option>
+                           <option>4000~5000</option>
+                           <option>5000~6000</option>
+                           <option>6000~7000</option>
+                           <option>7000~8000</option>
+                           <option>8000~9000</option>
+                           <option>10000以上</option>
+                           <option>面议</option>
+                        </select>
+                    </label>
+
+                </div>
+      	    </li>
+      	    <li class="resume-item selfitem">
+      	    	 <span class="fl">到岗时间</span>
+                 <input type="text" class="fr" placeholder="请输入">
+      	    </li>
+      	</ul>
+      	
+      </section>
+       <div class="personalDetailbtn">
+      	 <button class="button button-balanced button-full">
+                                保存
+         </button>
+       </div> 
+  </main>
+
+
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>

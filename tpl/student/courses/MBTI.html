@@ -1,0 +1,37 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">MRTI人格测试</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="test">
+    <!--题型五：单选题--><!--MBTI人格测试-->
+    <div class="page  page5">
+      <!--<div class="title bg_gray">第一部分：你心目中的理想职业（专业）</div>-->
+      <p>
+        每3题为一部分，找出符合自己的答案（单选）。
+      </p>
+      <div class="content" ng-repeat=" h in list5">
+        <div class="container">
+          <p>
+            {{$index+1}}. {{h.problem}}
+          </p>
+          <ul>
+            <li ng-repeat="i in h.answer">
+              <ion-radio name="'{{h.id}}'"><span>{{i}}</span></ion-radio>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <div class="submit"> <button class="button btn-load white">提交</button></div>
+
+
+</ion-content>
+
+
+

@@ -1,0 +1,88 @@
+
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">基本信息</h1>
+</ion-header-bar>
+<ion-content class=" has-header ">
+  <!-- 内容-->
+  <main class="information">
+     <form action="" method="post"  class="list list-inset">
+             <!--<div class="item item-input ">-->
+                   <!--<span>头像：</span>-->
+                   <div class="photo">
+                       <img src="img/avatar-edit.jpg">
+                       <img  ng-src="showImg/{{dealer.idCardFace}}"  class="idCardFace"  enlarge-pic style="max-width:100%;max-height:100%;margin:0 auto;display:block;" />
+                       <input type="file" file-model="idCardFace" img-view-id="idCardFace"/>
+                   </div>
+             <!--</div>-->
+              <label class="item item-input">
+              	 <span>姓名：</span>
+                 <input type="text" ng-model="studentUser.name" placeholder="请输入姓名" name="studentname">
+              </label>
+              <label class="item item-input">
+              	  <span>年龄：</span>
+                 <input type="text" ng-model="studentUser.age" placeholder="请输入年龄" name="studentage">
+              </label>
+              <!--<label class="item item-input">-->
+              	 <!--<span>院校：</span>-->
+                 <!--<input type="text" placeholder="请输入所在学校" name="studentschool">-->
+              <!--</label>-->
+              <!--<label class="item item-input">-->
+              	  <!--<span>专业：</span>-->
+                 <!--<input type="text" placeholder="请输入专业名称" name="studentmajor">-->
+              <!--</label>-->
+         <!--<label class="item item-input">-->
+             <!--<span>班级：</span>-->
+             <!--<input type="text" placeholder="请输入专业名称" name="studentmajor">-->
+         <!--</label>-->
+         <div class="list">
+
+             <label class="item item-input item-select">
+                 <div class="input-label">
+                     学校
+                 </div>
+                 <select  ng-model="studentUser.school">
+                     <option value="">请选择</option>
+                     <option value="0">Blue</option>
+                     <option value="1" selected>Green</option>
+                     <option value="2">Red</option>
+                 </select>
+             </label>
+             <label class="item item-input item-select">
+                 <div class="input-label">
+                     专业
+                 </div>
+                 <select ng-model="studentUser.major">
+                     <option value="">请选择</option>
+                     <option value="0">Blue</option>
+                     <option value="1">Green</option>
+                     <option value="2">Red</option>
+                 </select>
+             </label>
+             <label class="item item-input item-select">
+                 <div class="input-label">
+                     班级
+                  </div>
+                 <select ng-model="studentUser.classRoom">
+                     <option value="">请选择</option>
+                     <option value="0">Blue</option>
+                     <option value="1" >Green</option>
+                     <option value="2">Red</option>
+                 </select>
+             </label>
+
+           </div>
+                                 <!--提交按钮-->
+              <button class="button bg_red button-full white" type="submit" ng-click="submit()">
+                          提交
+              </button>
+     </form>
+  </main>
+
+
+
+</ion-content>
+
+
+
+

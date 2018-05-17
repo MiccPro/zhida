@@ -1,0 +1,66 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">职业核心能力训练</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header ">
+  <!-- 内容-->
+  <main class="career">
+    <div class="page1">
+       <div>任务所需时间：<span>4 周</span></div>
+       <div>
+           任务完成方式：<input type="radio" name="way" value="0"/>个人
+           <input type="radio" name="way" value="1"/>团队
+       </div>
+        <div>
+            任务名称：<input type="text"/>
+        </div>
+        <div>
+            任务开始时间：<input type="text"  id="dateSelectorOne">
+        </div>
+        <div>
+            能否坚持到底：<input type="radio" name="name" value="0"/>是
+            <input type="radio" name="name" value="1"/>否
+        </div>
+    </div>
+
+     <div class="submit"> <button class="button btn-load white">提交</button></div>
+      <ul class="list">
+          <li class="item" ng-click="jump('careerResult',{id:1})">
+              <span>第一周训练</span>  <i class="ion-ios-arrow-right fr"></i>
+          </li>
+          <li class="item" ng-click="jump('careerResult',{id:2})">
+              <span>第二周训练</span>  <i class="ion-ios-arrow-right fr"></i>
+          </li>
+          <li class="item" ng-click="jump('careerResult',{id:3})">
+              <span>第三周训练</span>  <i class="ion-ios-arrow-right fr"></i>
+          </li>
+          <li class="item" ng-click="jump('careerResult',{id:4})">
+              <span>第四周训练</span>  <i class="ion-ios-arrow-right fr"></i>
+          </li>
+          <li class="item" >
+              <span>四周总结</span>  <i class="ion-ios-arrow-right fr"></i>
+          </li>
+      </ul>
+  </main>
+
+
+
+</ion-content>
+
+<script>
+    new Mdate("dateSelectorOne");
+
+    new Mdate("dateSelectorOne", {
+        acceptId: "dateSelectorTwo",
+        beginYear: "2016",
+        beginMonth: "10",
+        beginDay: "24",
+        endYear: "2024",
+        endMonth: "1",
+        endDay: "1",
+        format: "."
+    })
+</script>
+

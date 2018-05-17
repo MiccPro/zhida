@@ -1,0 +1,30 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">投递记录</h1>
+</ion-header-bar>
+<ion-content class="main bg_gray send_resume">
+    <ul class="order flex_j container bg_white">
+        <li ng-repeat="h in title">
+            <a  class=" {{sendTabIndex==$index?'active':''}}" ng-click="sendTabChanged($index)">{{h}}</a>
+        </li>
+    </ul>
+    <div class="work bg_white">
+        <ul>
+            <li ng-repeat=" h in workList | filter:test" ng-click="jump('workDetail')">
+                <h4 class="flex_j"><span>{{h.name}}</span><span class="red">{{h.statue}}</span></h4>
+                <p class="flex_j"><span>{{h.company}}</span> <span>{{h.price}}</span></p>
+                <div class="yaoqiu flex_j">
+                    <div>
+                        <span>{{h.place}}</span>
+                        <span>{{h.jingyan}}</span>
+                        <span>{{h.xueli}}</span>
+                    </div>
+                    <div>2016-02-20</div>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</ion-content>
+
+

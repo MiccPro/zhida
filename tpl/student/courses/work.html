@@ -1,0 +1,79 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">霍兰德职业兴趣测试</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="test">
+    <!--题型一：填空题-->
+    <div class="page page1">
+      <div class="title bg_gray">第一部分：你心目中的理想职业（专业）</div>
+      <p>
+        对于未来的职业（或升学进行的专业）你也许早有考虑，他可能很抽象、很朦胧，也可能很具体、很清晰。
+        不管是哪种情况，现在都请你把最想做的三种工作或最想读的三种专业，按顺序写下来：
+      </p>
+      <ul class="container">
+        <li>
+          1.<input type="text" required/>
+        </li>
+        <li>
+          2.<input type="text" required/>
+        </li>
+        <li>
+          3.<input type="text" required/>
+        </li>
+      </ul>
+    </div>
+    <!--题型二：多选题-->
+    <div class="page page2">
+      <div class="title  bg_gray">第二部分：你所感兴趣的活动</div>
+      <p>
+        下面列举了一些具体活动。选择你喜欢参加的。
+      </p>
+      <div class="content" ng-repeat=" h in list1">
+        <div class="container">
+          <h4> {{h.type}}</h4>
+          <p>你喜欢做下列事情吗？</p>
+          <ul>
+            <li ng-repeat="i in h.content">
+              <ion-checkbox><span>{{$index+1}}. {{i}}</span></ion-checkbox>
+            </li>
+          </ul>
+          <!--<div class="total">-->
+            <!--<span>选中的个数：</span><span class="red" >5</span>-->
+          <!--</div>-->
+        </div>
+      </div>
+    </div>
+    <!--题型三：填表-->
+    <div class="page page3">
+      <div class="title bg_gray">第三部分：能力类型自我评定</div>
+      <p>
+        填写职业类型评分表，分数为1-7分，分数越大能力越强。
+      </p>
+      <div>
+        <div class="row">
+          <div class="col center" ng-repeat="h in list2">{{h.type}}</div>
+        </div>
+        <div class="row row_border">
+          <div class="col center" ng-repeat="h in list2">{{h.content}}</div>
+        </div>
+        <div class="row row_border">
+          <div class="col center" ng-repeat="h in list2">
+            <input type="number"  ng-model="h.score" onkeypress="this.value=this.value.replace(/[^089][1-7]{1}/g,'')" value="" required>
+            <!--<input type='text' onkeyup="(this.v=function(){this.value=this.value.replace(/[^089][1-7]{1}/g,'');}).call(this)" onblur="this.v();" />-->
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div class="submit"> <button class="button btn-load white">提交</button></div>
+
+</ion-content>
+
+
+

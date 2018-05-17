@@ -1,0 +1,41 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">气质性格测试</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="test">
+    <!--题型四：分值题：-2—2 --><!--气质性格测试-->
+    <div class="page  page4">
+      <!--<div class="title bg_gray">第一部分：你心目中的理想职业（专业）</div>-->
+      <p class="standard">
+        <span>完全一致：2分</span><span>比较一致： 1分</span>
+        <span>一致与不一致之间： 0分</span><span>不太一致： -1分</span>
+        <span>很不一致： -2分</span>
+      </p>
+      <div class="content" ng-repeat=" h in list4">
+        <div class="container  flex_j">
+          <p>
+            {{$index+1}}. {{h.problem}}
+          </p>
+          <select data-tap-disabled="true">
+            <option value="">-2</option>
+            <option value="">-1</option>
+            <option value="">0</option>
+            <option value="">1</option>
+            <option value="">2</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <div class="submit"> <button class="button btn-load white">提交</button></div>
+
+</ion-content>
+
+
+

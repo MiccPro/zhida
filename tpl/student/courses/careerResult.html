@@ -1,0 +1,72 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">职业核心能力训练本周结果</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+    <!-- 内容-->
+    <main class="careerResult">
+        <!--<div class="page1">-->
+        <div class="page1 flex_j flex_a">
+            <h4>任务名称：<span>跑步30分钟</span></h4>
+            <p ng-click="show()" class="bg_red white add_data" ng-show="lists.length<7">添加数据</p>
+        </div>
+        <div class="page2">
+            <p>一周7天数据记录:</p>
+            <div class="row center">
+                <div class="col">完成度</div>
+                <div class="col">时间</div>
+            </div>
+            <div class="row center" ng-show="lists==''">
+                <div class="col red">目前没有数据，请去添加数据</div>
+            </div>
+            <div class="row center" ng-show="lists!=''" ng-repeat="h in lists">
+                <div class="col">{{h.data}}</div>
+                <div class="col">{{h.time}}</div>
+            </div>
+        </div>
+        <div class="page3" ng-show="lists.length==7">
+            <!--<h4>一周任务统计：</h4>-->
+            <canvas id="c2"  height="300"></canvas>
+        </div>
+        <div class="page4" ng-show="lists.length==7">
+            <div class=""><span>在高点发生了什么：</span><input type="text" /></div>
+            <div class=""><span>在低点发生了什么：</span><input type="text" /></div>
+            <div><span>阻碍的因素是什么：</span><textarea class="txtarea"/></div>
+            <div><span>改善的因素是什么：</span><textarea class="txtarea"/></div>
+            <div><span>本周结果：</span><textarea class="txtarea"/></div>
+            <div><span>下周目标：</span><textarea class="txtarea" /></div>
+            <div><span>改进措施：</span><textarea  class="txtarea"/></div>
+            <div><span>执行中可预测的困难是：</span><textarea class="txtarea"/></div>
+            <div><span>我打算如何应对要出现的困难：</span><textarea  class="txtarea"/></div>
+        </div>
+        <div class="page5" ng-show="lists.length==7">
+            <button ng-click="btn()" class="button button-balanced ybtn" >上传训练图片或视频</button>
+        </div>
+        <div style="text-align: center;" id="showVideo"></div>
+        <div style="margin: auto;width: 300px;" id="showImg" ></div>
+        <!--</div>-->
+        <div class="submit1" ng-show="lists.length==7">
+            <button class="button1  white bg_red">提交</button>
+            <button class="button1  white bg_blue">保存</button>
+        </div>
+    </main>
+
+
+
+</ion-content>
+<!--弹出框-->
+<div class="model careerResult" ng-show = "model_show">
+    <div class="bg_white">
+        <div class="flex_j ">
+            <h4>完成度：<input type="number" ng-model="data"/></h4>
+            <i class="ion-close-round" ng-click="show()"></i>
+        </div>
+
+        <p ng-show="data!=''"><a class="white bg_red" ng-click="submit()">提交</a></p>
+        <p ng-show="data==''"><a class="white bg_gray">提交</a></p>
+
+    </div>
+</div>
+

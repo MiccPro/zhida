@@ -1,0 +1,56 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">我的简历</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="resume">
+     <article class="resume-header clearfix">
+     	   <div class="resume-img fl clearfix">
+     	   	  <img src=""/>
+     	   </div>
+     	   <section ng-click="jump('personalDetail')" class="fl clearfix">
+     	   	<span class="stu-name">李梅</span>
+     	   	<div>年龄</div>
+     	   	<div><p>毕业院校  | 专业</p></div>
+     	   	  <i class="arrow triangle"></i>
+     	   </section>
+            
+     </article>
+     <article class="resume-content">
+     	  <ul class="resume-list">
+          <li class="resume-item" ng-click="jump('jobIntension')">
+                                 求职意向    <i class="triangle arrowtwo"></i>
+          </li>
+          <li class="resume-item" ng-click="jump('addExperience')">
+                                 工作经验 <i class="smallselect">( 选填 )</i>  <i class="triangle arrowtwo"></i>
+          </li>
+           <li class="resume-item" ng-click="jump('award')">
+                                 活动奖励 <i class="smallselect">( 选填 )</i>   <i class="triangle arrowtwo"></i>
+          </li>
+          <li class="resume-item" ng-click="jump('evaluate')">
+                                 自我评价 <i class="smallselect">( 选填 )</i>    <i class="triangle arrowtwo"></i>
+          </li>
+          <li class="resume-item" ng-click="jump('hobby')">
+                                 特长爱好 <i class="smallselect">( 选填 )</i>   <i class="triangle arrowtwo"></i>
+          </li>
+     </ul>
+     
+     </article>
+     <div class="personalDetailbtn">
+      	 <button class="button button-balanced button-full" ng-click="jump('resumePreview')">
+                                简历预览
+         </button>
+       </div> 
+
+  </main>
+
+
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>

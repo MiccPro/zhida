@@ -1,0 +1,43 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">活动奖励</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="award">
+  	 <section> 
+  	    <div class="ce-content" style="border: none;">
+      	    <span>奖励和活动<i class="smallselect"> ( 选填 )</i></span>
+            <textarea name="" rows="" cols="" maxlength="5" placeholder="请输入，例如奖学金...(不能超过2000字)"></textarea>
+      	    <em></em>
+      	</div>
+      	<div class="ce-content">
+      	    <span>资格证书<i class="smallselect"> ( 选填 )</i></span>
+            <textarea name="" rows="" cols="" maxlength="5" placeholder="请输入(不能超过2000字)"></textarea>
+      	    <em></em>
+      	</div>
+      	<div class="ce-content">
+      	    <span>社会实践<i class="smallselect"> ( 选填 )</i></span>
+            <textarea name="" rows="" cols="" maxlength="5" placeholder="可以输入获得的称号或证书等等(不能超过2000字)"></textarea>
+      	    <em></em>
+      	</div>
+
+  	 </section>
+     <div class="personalDetailbtn">
+      	 <button class="button button-balanced button-full">
+                                保存
+         </button>
+       </div> 
+  </main>
+
+
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>
+
+

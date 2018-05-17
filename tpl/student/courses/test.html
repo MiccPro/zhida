@@ -1,0 +1,28 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">自我分析阶段</h1>
+</ion-header-bar>
+<ion-content class=" has-header has-footer">
+    <!-- 内容-->
+    <main class="course">
+        <div class="list">
+            <a class="item" ng-repeat="h in list" >
+                <span>{{h.name}}</span>
+                <span class="fr" ng-click="jump('{{h.url2}}')">测试结果<i class="ion-ios-arrow-right"></i></span>
+                <span class="fr last" ng-click="jump('{{h.url}}')">测试<i class="ion-ios-arrow-right"></i></span>
+            </a>
+            <a class="item" href="#/summarize" >
+                <span>自我分析报告</span> <i class="ion-ios-arrow-right fr"></i>
+            </a>
+        </div>
+    </main>
+
+
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>
+

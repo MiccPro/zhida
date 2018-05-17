@@ -1,0 +1,34 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">工作经验</h1>
+</ion-header-bar>
+
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="addExperiences">
+  	 <div class="list">
+        <ul>
+        	<li class="item item-avatar addExperienceLi" ng-click="jump('changeExperience')">
+        		<h2>公司名称</h2>
+                <p>时间 | 职务</p>
+        	    <span class="triangle" style="right: 16px;"></span>
+        	</li>
+        </ul>
+     </div>
+     <div class="addExperience" ng-click="jump('changeExperience')">
+     	+ 添加工作经历
+     </div>
+
+  </main>
+
+
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>
+
+
