@@ -1,0 +1,45 @@
+<!--页头-->
+
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">学生详情</h1>
+</ion-header-bar>
+<ion-content class=" has-header  bg_gray">
+  <!-- 内容-->
+  <main class="companyDetail">
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="http://www.runoob.com/try/demo_source/mcfly.jpg" style="border-radius: 50%;"/>
+        <h2 style="margin: .5rem  0 0 3rem">张三</h2>
+      </div>
+      <div class="item item-body">
+        <ul class="item-ul">
+          <li>学院：艺术学院</li>
+          <li>专业：音乐</li>
+          <li>班级：1102</li>
+          <li>班长：李四</li>
+        </ul>
+      </div>
+    </div>
+    <h2 class="center ">课程</h2>
+    <ul class="list">
+      <li class="item " ng-click="jump('score_1')">
+        第一阶段：职业核心能力训练结果<i class="ion-ios-arrow-right fr"></i>
+      </li>
+      <li class="item " ng-click="jump('score_2')">
+        第二阶段：自我分析阶段结果<i class="ion-ios-arrow-right fr"></i>
+      </li>
+      <li class="item" ng-click="jump('score_3')">
+        第三阶段：职业体验阶段结果
+        <i class="ion-ios-arrow-right fr"></i>
+      </li>
+      <li class="item" ng-click="jump('resumePreview')">
+        第四阶段：简历
+        <i class="ion-ios-arrow-right fr"></i>
+      </li>
+    </ul>
+  </main>
+
+</ion-content>
+
+

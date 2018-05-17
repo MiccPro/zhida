@@ -1,0 +1,63 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">搜索</h1>
+</ion-header-bar>
+<ion-content>
+    <div class=" search">
+        <!--1.搜索框-->
+        <div class="bar bar-header item-input-inset">
+            <label class="item-input-wrapper" ng-click="jump('Search')">
+                <input type="search" placeholder="请输入职位或公司" ng-model="inputTxt.kw" ng-focus="onInput1()" ng-blur="onInput2()">
+                <i class="icon ion-ios-search placeholder-icon"></i>
+            </label>
+            <button class="button button-clear header_news" ng-click="btnClicked(inputTxt.kw)" ng-disabled="!inputTxt.kw">
+                搜索
+            </button>
+        </div>
+        <!--2.热门搜索与历史搜索-->
+        <div class="container page2" ng-show="isShow">
+            <p>热门推荐</p>
+            <div><a class="word" ng-repeat="h in data" ng-click="selectWord(h)">{{h}}</a></div>
+            <div class="yclean">
+                <div>历史搜索</div>
+                <div ng-click="ydoclean()">清空历史</div>
+            </div>
+            <div><a class="word" ng-repeat="item in yarr track by $index" ng-click="selectWord(item)">{{item}}</a></div>
+        </div>
+        <!--3.搜索列表-->
+        <ul class="list page3" ng-show="listShow">
+            <li class="item" ng-repeat="h in list">
+                <a ng-click="btnClicked(h)">{{h}}</a>
+            </li>
+        </ul>
+        <!--4.搜索内容-->
+        <div class="main page4" ng-show="!isShow && !listShow">
+            <!--<ul class="flex">-->
+                <!--<li class=" {{tabIndex==0?'active':''}}" ng-click="tabChanged(0)"><h4>人气</h4></li>-->
+                <!--<li class=" {{tabIndex==1?'active':''}}" ng-click="tabChanged(1)"><h4>销量</h4></li>-->
+                <!--<li ng-show="!open" class=" {{tabIndex==2?'active':''}}" ng-click="tabChanged(2)"><h4>价格<i class="ion-arrow-up-c red"></i></h4></li>-->
+                <!--<li ng-show="open" class=" {{tabIndex==2?'active':''}}" ng-click="tabChanged(2)"><h4>价格<i class="ion-arrow-down-c red"></i></h4></li>-->
+            <!--</ul>-->
+            <div class="content work">
+                <!--<div class="row" ng-repeat="h in lists | orderBy:parameter" ng-click="jump('Detail',{id:h.id})">-->
+                    <ul>
+                        <li ng-repeat=" h in workList" ng-click="jump('workDetail')">
+                            <h4>{{h.name}}</h4>
+                            <div class="flex_j">
+                                <span>工作地点：{{h.place}}</span>
+                                <span style="color: red;">招{{h.person}}人</span>
+                            </div>
+                            <div class="flex_j">
+                                <div class="name flex_a">
+                                    <img src="img/1.jpg" alt="" style="width: 3rem"/>
+                                    <span>{{h.company}}</span>
+                                </div>
+                                <span>{{h.time}}</span>
+                            </div>
+                        </li>
+                    </ul>
+                <!--</div>-->
+            </div>
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,56 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <div class="bar bar-header item-input-inset" style="margin-top: -.4rem">
+    <label class="item-input-wrapper">
+      <i class="icon ion-ios-search placeholder-icon"></i>
+      <input type="search" placeholder="搜索">
+    </label>
+  </div>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer">
+  <!-- 内容-->
+  <main class="companyList">
+
+    <ul class="flex_j container">
+      <li>
+        <select name="" >
+          <option value="0">公司规模</option>
+          <option value="{{$index+1}}" ng-repeat="h in person">{{h}}</option>
+        </select>
+      </li>
+      <li>
+        <select name="" >
+          <option value="0">所在地</option>
+          <option value="{{$index+1}}" ng-repeat="h in place">{{h}}</option>
+        </select>
+      </li>
+      <li>
+        <select name="">
+          <option value="">公司性质</option>
+          <option value="{{$index+1}}" ng-repeat="h in nature">{{h}}</option>
+        </select>
+      </li>
+      <li>
+        <select name="" id="">
+          <option value="">所属行业</option>
+          <option value="{{$index+1}}" ng-repeat="h in trade">{{h}}</option>
+        </select>
+      </li>
+    </ul>
+    <div class="row" ng-repeat="h in companyLists" ng-click="jump('companyDetail')">
+       <div class="col col-33"><img ng-src="{{h.image}}" style="width: 100%"></div>
+       <div class="col content">
+         <h4>{{h.name}}</h4>
+         <p class="place">{{h.place}}</p>
+         <p>发布{{h.jobNumber}}个职位</p>
+       </div>
+    </div>
+  </main>
+
+
+
+</ion-content>
+
+

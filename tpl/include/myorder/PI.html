@@ -1,0 +1,44 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">个人信息</h1>
+</ion-header-bar>
+<ion-content class=" has-header ">
+    <!-- 内容-->
+    <main class="PI">
+        <ul class="list">
+           <li class="flex_j  item photo">
+               <div>头像</div>
+               <div>
+                   <img ng-src="showImg/{{dealer.idCardFace}}"  class="idCardFace"  enlarge-pic style="max-width:2.5rem;max-height:2.5rem;border-radius: 50%" />
+                   <input  type="file" file-model="idCardFace" img-view-id="idCardFace"/>
+                   <i class="ion-ios-arrow-right"></i>
+               </div>
+           </li>
+            <li ng-show="role==h.role || h.role==0" class="flex_j item" ng-repeat="h in lists">
+                <div>{{h.title}}</div>
+                <div ng-click="show(h.content)">
+                    <span>{{h.content}}</span>
+                    <i class="ion-ios-arrow-right"></i>
+                </div>
+            </li>
+        </ul>
+    </main>
+
+
+
+</ion-content>
+
+<!--弹出框-->
+<div class="model careerResult" ng-show = "model_show">
+    <div class="bg_white">
+        <div class="flex_j ">
+            <h4>请输入内容：<input class="center" type="text" ng-model="PIdata"/></h4>
+            <i class="ion-close-round" ng-click="show()"></i>
+        </div>
+
+        <p ng-show="PIdata!=''"><a class="white bg_red" ng-click="submit()">确定</a></p>
+        <p ng-show="PIdata==''"><a class="white bg_gray">确定</a></p>
+    </div>
+</div>
+

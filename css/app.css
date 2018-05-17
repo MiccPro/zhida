@@ -1,0 +1,1436 @@
+/*html {font-size: 62.5%;/!*10 ?? 16 ?? 100% = 62.5%*!/}*/
+body, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, input, p, td, textarea, th {
+  padding: 0;margin: 0;box-sizing:border-box;
+}
+body, html {
+  height: 100%;font-family: sans-serif;line-height: 1.15;display: block;
+}
+p,h1,h4{
+  margin: 0;
+  padding: 0;
+}
+a,a:hover{
+  color:#333;
+  text-decoration: none;
+}
+
+a.active,li.active{
+  color: red!important;
+}
+.clearfix:after{
+  content:'';width:0;height:0;display:block;clear:both;
+}
+.clearfix{
+  overflow:hidden;
+}
+.fr {
+  float: right;
+}
+.fl{
+  float: left;
+}
+.flex_j{
+  display: flex;
+  justify-content: space-between;
+}
+.flex_a{
+  display: flex;
+  align-items: center;
+}
+.flex_c{
+  display: flex;
+  align-content: center;
+}
+.blue{
+  color:#7ED1FA;
+}
+.red{
+  color: red;
+}
+.bg_red{
+  background: red;
+}
+.white{
+  color: white;
+}
+.bg_white{
+  background: white;
+}
+.bg_gray{
+  background: #eee;
+}
+.gray{
+  color: #ccc;
+}
+.center{
+  text-align: center;
+}
+/*//模态框*/
+.model{
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+.model>div.bg_white{
+  width: 80%;
+  padding: 2rem 0 1.5rem;
+  margin: 75% auto;
+  text-align: center;
+  letter-spacing: 2px;
+  border-radius: .5rem;
+}
+.model>div>p{
+  margin-top: 2rem;
+}
+.model>div>p a{
+  padding: .5rem 2rem;
+  border-radius: 1rem;
+  margin: 0 .6rem;
+}
+.model>div>p .cancel{
+  background: #ddd;
+}
+.container{
+  padding:0 .8rem;
+}
+/*.main.has-header{*/
+  /*top:90px;*/
+/*}*/
+.bar{
+  background: none;
+}
+.bar.bar-stable{
+  background: #fff!important;
+  border: 1px solid #ddd;
+}
+.bottom{
+  border-bottom: 1px solid #ddd;
+}
+/*无数据时的状态*/
+.no-datas{
+  width: 50%;
+  margin:0 auto ;
+  padding: 74% 0;
+  text-align: center;
+  font-size: 1.1rem;
+}
+/*相同的代码*/
+/*小三角*/
+.triangle{
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-right:1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  margin-top: -5px;
+}
+/************???***************/
+/*????*/
+.bar .item-input-wrapper{
+  border-radius: 2rem;
+  padding-left: 1rem;
+}
+.bar .item-input-wrapper i{
+  font-size: 1.5rem;
+}
+/*???*/
+.bar .button-clear{
+  color: #444;
+}
+.header_news>i{
+  font-size: 1.8rem;
+}
+/*?��???*/
+.bar-subheader{
+  width: 100%;
+  padding: 1rem 1rem 0 ;
+}
+.bar-subheader ul{
+  width: 100%;
+  height: 1.8rem;
+}
+.bar-subheader ul>li{
+  height: 100%;
+}
+.bar-subheader ul>li:last-child{
+  margin-right: 0;
+}
+.bar-subheader li>a{
+  padding-bottom: .5rem;
+}
+/*?��?????tab?*/
+.bar-subheader li>a.active,
+.detail .title>a.active,
+.water .title li.active{
+  border-bottom: 2px solid red;
+}
+
+/**************************start******************************/
+.centerStart img{
+  width: 100%;
+  height: 100%;
+}
+.centerStart .text-center{
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+/******************************** register/login ************************/
+.register select{
+  width: 30%;
+  border: none;
+}
+.register .item .input-label {
+  text-align: right;
+  width: 20%;
+  margin-right: 3rem;
+}
+/*提交按钮*/
+.submit{
+  margin: 2rem 1.5rem;
+}
+.submit .button:disabled{
+  background-color: #ddd;
+}
+.submit button.activated,
+.submit button{
+  width: 100%;
+  background-color: red;
+  letter-spacing: .5rem;
+  font-size: 1.3rem;
+  border: none;
+}
+.submit .error{
+   margin: 1rem 0;
+}
+.login .sign_in {
+  overflow: hidden;
+  margin: 0 1.5rem;
+}
+.submit .rule{
+  margin-bottom: 1rem;
+  color: #ddd;
+}
+.submit1{
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+}
+.submit1>button{
+    float: left;
+    width: 40%;
+    height: 3rem;
+    border: none;
+    font-size: 1.2rem;
+}
+.submit1>button:nth-child(1){
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+/******************************** 首页 ************************/
+/*轮播图*/
+.slide.item{
+  padding: 0;
+  border-style: none;
+  margin: 0;
+}
+.slider-pager {
+  z-index: 100;
+}
+.main .slider-pager .slider-pager-page {
+  color:red;
+}
+/*轮播图*/
+.slide.item{
+  padding: 0;
+  border-style: none;
+  margin: 0;
+}
+.slider-pager {
+  z-index: 100;
+}
+.main .slider-pager .slider-pager-page {
+  color:red;
+}
+.main main{
+  padding: 1rem 0;
+}
+.main main>div{
+  padding:1rem;
+  margin-bottom: 1rem;
+}
+.main main .title{
+  padding: 0 .5rem;
+  border-left: .1rem solid red;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.main .company li,
+.main .school li{
+  width: 47.5%;
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  padding: .5rem;
+  box-sizing:border-box;
+  height: 9rem;
+}
+.main .company li:nth-child(odd),
+.main .school li:nth-child(odd){
+  margin-right:1rem;
+}
+.main .company li img{
+  width: 90%;
+}
+.main .school li img{
+  width: 70%;
+}
+.main .work li{
+  line-height: 2rem;
+  border-top: .2rem solid #eee;
+  padding: .8rem 1rem ;
+}
+
+.main .work li div span,.main .work li p{
+  color: #AAAAAA;
+}
+
+/******************************** student  information ************************/
+.information .button.button-block, .button.button-full{
+	 margin-top: 26px;
+}
+.information .photo{
+  margin: 0 auto 1rem;
+  width: 6rem;
+  height: 6rem; 
+  position: relative;
+}
+.information .photo img{
+  width: 100%;
+  border-radius: 50%;
+}
+.information .photo input{
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+.information .photo .idCardFace,
+.information .photo input{
+    position: absolute;
+    top:0;
+    left: 0;
+    z-index: 100;
+}
+
+/******************************** student resume ************************/
+
+.resume .resume-header{
+	 background-color: #fff;
+	 padding: 3%;
+	 margin: 2% 0;
+	 position: relative;
+}
+/*人物头像*/
+.resume .resume-header .resume-img{
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	background-color: red;
+}
+/*人物 姓名..*/
+.resume .resume-header section{
+	 margin:0 3%;
+	 width: 74%; 
+}
+.resume .resume-header section div{
+	margin-top: 3%;
+	color: #868686;
+}
+/*文字省略*/
+.resume .resume-header section div p,section .stu-name,.addExperiences p{
+	display: inline-block;
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.resume .resume-header section .stu-name{
+	font-size:1.4rem;
+}
+/*小三角*/
+.arrow{
+   right: 5%;
+}
+/*填写的内容  content*/
+.resume-content{
+	 padding:0 3%;
+	 background-color: #fff;
+}
+.resume-list .resume-item{
+	border-bottom: 1px solid #e0e1e5;
+	height: 56px;
+	line-height: 56px;
+	font-size: 18px;
+	position: relative;
+}
+.arrowtwo{
+    right: 3%;
+}
+ .resume-item:last-child{
+	border:none;
+}
+/******************************** set-resume personal-detail ************************/
+.common{
+	 background-color: #fff;
+	 padding: 3% 3% 0 3%;
+}
+.personalDetail .selfitem,.ce-content span{
+	 height: 44px;
+	 line-height: 44px;
+	 font-size: 14px;
+	 color: #444;
+}
+.personalDetail .selfitem input{
+	 padding:8px 24px 0 0;
+	 text-align: right;
+}
+.smallselect{
+	 color: #ccc;
+	 font-size: 10px;
+}
+.personalDetailbtn{
+	  padding:3% 6%;
+}
+.personalDetail .item{
+	border: none;
+}
+.personalDetail .input-label{
+	font-size: 14px;
+	padding: 6px 6px 6px 0px;
+}
+.personalDetail .item-input{
+	padding:5px 0 5px 0px;
+}
+/******************************** set-resume  add-experience************************/
+.item-avatar{
+	padding: 16px 30px 16px;
+}
+.addExperienceLi{
+	margin-bottom: 10px;
+}
+/*添加工作经验按钮*/
+.addExperience{
+	  display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #4c99ff;
+    text-align: center;
+    margin-top: 8px;
+    background-color: #fff
+}
+/******************************** set-resume change-expreience************************/
+.ce-content{
+	border-top: 1px solid #e0e1e5;
+}
+.ce-content em{
+	 height: 10px;
+	 display: block;
+}
+.ce-content  textarea{
+	  width: 100%;
+    height: 110px;
+    line-height: 20px;
+    font-size: 12px;
+    vertical-align: top;
+    padding: 8px;
+    background-color:#f6f7f9;
+}
+/******************************** award ************************/
+.award section{
+	 background-color: #fff;
+	 margin-top: 3%;
+	 padding: 0 3%;
+}
+/******************************** resume-preview ************************/
+.resumePreview .rp-message{
+	margin-top: 3%;
+	position: relative;
+	background-color: #fff;
+}
+.rp-message h4,.rp-message p{
+	padding: 1% 5%;
+}
+.rp-message span{
+	display: block;
+	color: #33cd5f;
+	padding: 3% 5%;
+	border-bottom: 2px solid #33cd5f;
+}
+.rp-message p label{
+	color: #444;
+}
+.rp-message img{
+	position: absolute;
+	top: 18%;
+	right: 8%;
+  width: 6rem;
+  height: 7rem;
+  background-color: red;	
+}
+/********************************  公司列表 ,学校列表 ************************/
+.companyList select,.schoolList select{
+  padding: .5rem .2rem;
+  font-size: .9rem;
+  border: none;
+}
+.companyList>ul,.schoolList .title ul{
+  margin: 1rem 0;
+}
+.companyList .row,.schoolList .row{
+  border-top: 1px solid #ddd;
+}
+.companyList .content,.schoolList .content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.companyList .content .place,.schoolList .content .place{
+  margin: .6rem 0;
+}
+.schoolList .col img{
+  width: 90%;
+}
+/********************************  公司详情  ************************/
+
+.companyDetail h2{
+  font-weight: bold;
+  font-size: 16px;
+}
+.companyDetail .item-ul{
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: .5rem;
+}
+
+.companyDetail .item-body .item-ul li{
+  width: 50%;
+}
+.companyDetail .item-ul li{
+  line-height: 20px;
+  font-size: 0.9rem;
+  margin: 3px 0;
+}
+.companyDetail .item-body h2,.companyDetail .work h2{
+  margin: 1rem 0;
+  /*color: #bbb;*/
+}
+.companyDetail .work ul{
+  margin-bottom: 1rem;
+  padding: 1rem .8rem;
+}
+.companyDetail .work li{
+  line-height: 2rem;
+}
+.companyDetail .work li:not(:first-child){
+  font-size: .9rem;
+}
+.companyDetail .place{
+  padding-bottom: 1rem ;
+  border-bottom: .1rem solid #ddd;
+}
+.companyDetail  .place span{
+  margin-left: 1rem;
+}
+.companyDetail .work li a{
+  padding:.2rem .5rem ;
+  margin-right: 1rem;
+  background-color: #EAF1FB;
+  color: #ababab;
+  font-size: .8rem;
+}
+
+/********************************  职位详情 ************************/
+
+.workDetail h4{
+  font-weight: bold;
+}
+.workDetail p{
+  font-size: 1rem;
+  line-height: 20px;
+  letter-spacing: 2px;
+}
+.workDetail p{
+  margin: .3rem;
+}
+
+.workDetail h4{
+  margin:1rem .3rem;
+}
+.workDetail ul{
+  display: flex;
+  margin: 5px;
+}
+.workDetail .card-top{
+  padding: .5rem;
+  line-height: 2rem;
+}
+.workDetail ul li:nth-of-type(2){
+  margin: 0 6px;
+  padding: 0 6px;
+}
+.workDetail .content{
+  padding: .5rem 0.8rem 1.5rem;
+  margin-top: 1rem;
+}
+.workDetail .row .col span.gray{
+  font-size: .8rem;
+}
+.workDetail .row .col:last-child{
+  text-align: right;
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+.workDetail-footer{
+    padding: 0;
+}
+.workDetail-footer a:first-child{
+  text-align: center;
+  margin-left: 2rem;
+}
+.workDetail-footer a:first-child i{
+  font-size: 1.5rem;
+}
+.workDetail-footer a.white{
+   padding:.8rem  5rem ;
+  font-size: 1.1rem;
+}
+.workDetail-footer a.sended{
+  background-color: #ababab;
+}
+
+/******************************** course ************************/
+.course {
+  margin-bottom: 2rem;
+}
+
+.course .item span.fr{
+  color: #B7C9E5;
+}
+.course .item  span.fr i{
+  margin-left: .3rem;
+}
+.course .item  span.last{
+  margin-right: 1.8rem;
+}
+/******************************** test ************************/
+.test .title{
+  padding: .5rem;
+}
+.test .page{
+  margin-bottom: 1rem;
+}
+.test .page>p{
+  margin: .5rem;
+  /*color: #6BB0FE;*/
+}
+.test .page1 li{
+  line-height: 2rem;
+}
+.test .page input{
+  border-bottom: 1px solid #ddd;
+  display: inline-block;
+  padding-left: .5rem;
+  width: 20%;
+}
+.test .page1 li input{
+  width:95% ;
+}
+.test .page2 ul{
+  padding: .5rem 0;
+}
+/*复选框*/
+.test .page .item{
+  border: none;
+  padding-top:.5rem;
+  padding-bottom: .5rem;
+}
+.test .page2 .item-checkbox .checkbox{
+  left: 0px;
+}
+.test .page .content>div{
+  margin: 1.5rem 0;
+}
+.test .page .content>div .total{
+  margin-left: .5rem;
+}
+/*表格题*/
+.test .page3 div .row:nth-child(2){
+  border-top: 2px solid #ddd;
+}
+.test .page3 div .row:last-child{
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 0;
+}
+.test .page3 div .row_border .col:not(:last-child){
+  border-right: 1px solid #ddd;
+}
+.test .page3 div .row:nth-child(2){
+  border-bottom: 1px solid #ddd;
+}
+.test .page3 .col{
+  padding: 5px 13px;
+}
+.test .page3 .col input{
+  border: none;
+  width: 100%;
+}
+/*题四：分值题*/
+.test .page4 .standard{
+line-height: 1.5rem;
+}
+.test .page4 .standard span{
+  margin: 0 .5rem;
+}
+.test .page4 .content select{
+  width: 15%;
+  border: none;
+}
+/*题五：单选*/
+.test .page5 .content:nth-child(3n+1){
+  border-bottom: 1px solid #ddd;
+}
+.test .page5 .content:last-child{
+  border-bottom:none;
+}
+.test .page5 .item-radio{
+  padding: 0;
+}
+.test .page5 .item-radio .item-content{
+  padding-top:.5rem;
+  padding-bottom:.5rem ;
+}
+.test .page5 .item-radio i{
+  top:-12px
+}
+
+/*题六：分值题*/
+.test .page6 .content>div,
+.test .page7 .content>ul li{
+  line-height: 1.5rem;
+  margin: 1rem 0;
+}
+.test .page6 .content input.score{
+  margin-left:1rem;
+  height:1.5rem ;
+}
+/*题七：填空题*/
+.test .page7 .content input{
+  width: 50%;
+  height:1.5rem ;
+}
+.test .page8 .content .flex_j{
+  margin: .5rem 0;
+  line-height: 1.5rem;
+}
+.test .page8 .content .flex_j p{
+  width: 60%;
+}
+
+
+/******************************** 测试结果 ************************/
+
+/*霍兰德测试结果*/
+.result_work{
+  padding: 1rem;
+}
+.result_work h3{
+  margin-bottom: 1rem;
+}
+.result_work li{
+  margin:.6rem 1rem;
+}
+.result_work ul{
+  padding: .5rem 1rem;
+}
+.result_work .qizhi {
+  display: flex;
+  flex-wrap: wrap;
+}
+.result_work .qizhi li{
+  line-height: 2rem;
+  width: 40%;
+}
+.result_work .qizhi li span:first-child{
+  margin-right: 1rem;
+}
+.result_work div.container{
+  padding-top: 1rem;
+}
+.result_work p{
+  margin: .5rem 0;
+}
+.result_work div p>a{
+  color: red;
+}
+.result_work .MBTI span{
+  display: inline-block;
+  width: 20%;
+  margin-left: .5rem;
+}
+/******************************** summarize ************************/
+.summarize{
+  margin-bottom: 1rem;
+}
+.summarize .list{
+   margin-bottom: 0;
+}
+.summarize .list .item{
+  white-space: normal;
+  width: 100%;
+}
+.summarize .page{
+  margin: 1rem 0 3rem;
+}
+.summarize .page div{
+  border-bottom: 1px solid #ddd;
+  padding-bottom: .5rem;
+}
+.summarize .page div span{
+  padding: 0 .5rem;
+}
+.summarize  textarea{
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+.summarize h4{
+  font-size: 1.2rem;
+}
+.summarize .check span{
+  font-size: 1rem;
+}
+.summarize .check li:first-child{
+  margin-bottom: 1rem;
+}
+.summarize .check textarea{
+  width: 70%;
+  height: 8rem;
+  border: 1px solid #ddd;
+  margin: 0;
+}
+/******************************** detail:学校详情 ************************/
+.detail .row{
+  vertical-align: middle;
+}
+.detail .col img{
+  width: 100%;
+}
+.detail .col .school_name{
+  margin-bottom: .5rem;
+}
+.school_word{
+    text-indent: 2em;
+}
+.school_gold{
+    text-indent: 2em;
+}
+.school_border{
+    width: 100%;
+    border-bottom: 1px solid grey;
+}
+
+
+
+/******************************** myorder ************************/
+.myOrder .myOrder1{
+  /*height: 7rem;*/
+  padding-bottom: 1rem;
+}
+.myOrder .myOrder1 .title{
+  padding: 1.5rem 1rem 2rem;
+  background: url("../img/bg-login.jpg");
+}
+.myOrder .myOrder1 .title .cont{
+  display: flex;
+  align-items: center;
+}
+.myOrder .myOrder1 .cont .bg_white{
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  padding: .51rem;
+  margin-right: 1rem;
+}
+.myOrder .myOrder1 .cont .bg_white img{
+  width:100%;
+}
+.myOrder .myOrder1 .cont .white{
+  font-size: 1.3rem;
+}
+.myOrder .myOrder1 .all_order{
+  padding:1rem 1rem 0;
+}
+
+.myOrder .myOrder3{
+  margin-top: .8rem;
+}
+.myOrder .myOrder3>li{
+  line-height: 4rem;
+}
+.myOrder .myOrder3>li>div{
+  border-bottom: 1px solid #ddd;
+  /*margin-left: 2rem;*/
+}
+.myOrder .myOrder3>li:last-child>div{
+  border-bottom: none;
+}
+/******************************** 投递记录 ************************/
+.send_resume .order{
+  margin-bottom: .5rem;
+}
+.send_resume .order li{
+  line-height:3rem;
+  text-align: center;
+}
+.send_resume .order li a.active{
+  padding-bottom: .68rem;
+  border-bottom: 1px solid red;
+}
+.send_resume .work .yaoqiu{
+  font-size: .9rem;
+}
+.send_resume .work .yaoqiu span{
+  margin-right: .5rem;
+}
+
+/******************************** news 消息************************/
+.news ul.title{
+    padding: 1rem .5rem;
+}
+.ynewslist{
+    width: 100%;
+    background: white;
+    margin-top: .5rem;
+}
+.ylisttitle{
+    overflow: hidden;
+}
+.ynewslist .ylisttitle>div:nth-child(1){
+    float: left;
+    font-size: 1.1rem;
+    font-weight: bolder;
+}
+.ynewslist .ylisttitle>div:nth-child(2){
+    float: right;
+    color: red;
+    font-size: 1.1rem;
+}
+.ynewslist p{
+    color: grey;
+}
+.ylistpadding{
+    padding: 1rem;
+}
+.ycpmpanyname{
+    margin-top: .5rem;
+}
+.ycompanydel{
+    margin-top: .5rem;
+    font-size: 0.8rem;
+}
+.ycompanydel>span:nth-child(2){
+    margin-left: 1rem;
+}
+.yline{
+    width: 100%;
+    border: .5px solid gainsboro;
+}
+.yliststate{
+    text-align: right;
+    padding: .5rem 1rem .5rem 0;
+    font-weight: bolder;
+}
+/******************************** career 职业核心能力训练************************/
+.career .page1{
+  padding: 1rem;
+  line-height: 3.5rem;
+  border-bottom: 1px solid #ddd;
+}
+.career .page1 input,.careerResult input{
+  margin: 0 .5rem;
+  display: inline-block;
+  border-bottom: 1px solid #ddd;
+}
+/********************************  careerResult 职业核心能力训练一周结果************************/
+.careerResult h4{
+  padding: 1rem 0;
+}
+.careerResult {
+  padding: 1rem;
+  line-height: 2rem;
+}
+.careerResult .page2 .row .red{
+  margin-top: 4rem;
+}
+.careerResult .page3{
+  margin: 2rem 0;
+}
+.careerResult .page4>div{
+    padding: 1rem 0;
+    margin-top:1rem;
+}
+.careerResult textarea{
+  border: 1px solid powderblue;
+  display: inline-block;
+  width: 85%;
+  min-height: 6rem;
+  padding: .5rem;
+}
+.careerResult .page2 input{
+  width: 70%;
+}
+.careerResult .add_data{
+  padding: 0rem .5rem;
+}
+.model .flex_j{
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+/******************* report 职业体验报告 ****************/
+.report .page1 a.red{
+  margin-right: .5rem;
+}
+.report textarea{
+  border: 1px solid #ddd;
+  width: 95%;
+  margin: auto;
+  height: 6rem;
+  padding: .5rem;
+}
+/******************* our 关于我们 ****************/
+.our img{
+  width: 15%;
+}
+.our .text{
+  margin-left: 2rem;
+}
+.our li:first-child span{
+  font-size: 1.5rem;
+}
+.our li:last-child{
+  display: flex;
+  align-items: flex-start;
+}
+.our p.text{
+  white-space: pre-wrap;
+  margin-top: -.8rem;
+}
+/******************* helpSon ：帮助与反馈答案 ****************/
+.helpSon .list p,
+.helpSon .list div.bg_white{
+  padding: .8rem .8rem;
+  line-height: 1.5rem;
+  /*font-size: .9rem;*/
+}
+/************ PI 个人信息 ***********/
+.PI i{
+  margin-left: .5rem;
+}
+.PI .photo{
+  position: relative;
+  height: 4rem;
+}
+.PI .photo input,
+.PI .photo img{
+  position: absolute;
+  top:.6rem;
+  right:2rem;
+}
+.PI .photo input{
+  width: 20%;
+  opacity: 0;
+}
+/************ myCompany 我的公司 ***********/
+.myCompany .title{
+  margin: 2rem 0;
+}
+.myCompany .title img{
+  width: 6rem;
+}
+.myCompany .title div{
+  margin: 1rem 0;
+}
+.myCompany .content li{
+  line-height: 2rem;
+}
+/******************* myStudents 我的学生 ****************/
+.myStudents .title ul{
+  margin: 0 0 1rem;
+  padding: 1rem .8rem;
+}
+
+.myStudents .page{
+  padding: 1rem;
+  margin-bottom: .6rem;
+}
+.myStudents  img{
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+.myStudents .page .name{
+  margin-bottom: 1rem;
+}
+.myStudents .page .page2{
+  width: 100%;
+}
+
+/************ main 人才推荐 ***********/
+.main main {
+  padding-bottom: 0;
+}
+.main .persons .item-avatar{
+ height:8rem;
+}
+.main .persons .item-avatar div p{
+  margin-top: .5rem;
+}
+.main .persons .item-avatar>p{
+  padding: 1rem 0;
+}
+.manul .maninner{
+  display: flex;
+  padding-bottom: 10px;
+  position: relative;
+}
+.manul .maninner li{
+  flex: 1;
+  text-align: center;
+  font-size: 16px;
+  color: #aaa;
+}
+.manul .maninner .lis i{
+  margin-left: .5rem;
+}
+.manul .maninner .lis a{
+  background-color: red;
+  color: white;
+}
+/*向下箭头*/
+/*.lis:after{*/
+  /*content: "";*/
+  /*display: inline-block;*/
+  /*width: 8px;*/
+  /*height: 8px;*/
+  /*border-left: solid 1px #797979;*/
+  /*border-top: solid 1px #797979;*/
+  /*-webkit-transform: rotate(-135deg);*/
+  /*position: relative;*/
+  /*top: -3px;*/
+  /*left: 10px;*/
+  /*transition: all .3s ease 0s;*/
+/*}*/
+.manul .maninner li:first-child{
+  border-right: 1px solid #ebebeb;
+}
+.item h2{
+  font-size: 20px;
+  margin: 0 0 2px 6px;
+}
+.case{
+  font-size: 14px;
+  color: #aaa;
+}
+/*要求弹出框*/
+.lisinner{
+  z-index: 10;
+  position: absolute;
+  width: 100%;
+  background-color:#fff;
+  /*display: none;*/
+}
+.seclisinner{
+  right: 0;
+  top: 30px;
+}
+.onelisinner{
+  top: 28px;
+  left: 0;
+}
+.lisinner .lisinners p{
+  text-align: left;
+  margin: 1rem 0;
+}
+.lisinner .lisinners p a{
+   padding: .3rem 1rem;
+}
+.lisinner .lisinners span{
+  float: left;
+  border: 1px solid #aaa;
+  padding: 0 15px;
+  /*height: 30px;*/
+  line-height: 1.5rem;
+  text-align: center;
+  border-radius: 10%;
+  margin: 0 10px 10px 0;
+  font-size: .9rem;
+}
+.lisinner .lisinners .ylight{
+    color: red;
+    border: 1px solid red;
+}
+/*@-webkit-keyframes fadeIn {*/
+    /*0% {*/
+        /*opacity: 0; /!*初始状态 透明度为0*!/*/
+    /*}*/
+    /*25% {*/
+        /*opacity: 0.25; /!*中间状态 透明度为0*!/*/
+    /*}*/
+    /*50% {*/
+        /*opacity: 0.5; /!*中间状态 透明度为0*!/*/
+    /*}*/
+    /*75% {*/
+        /*opacity: 0.75; /!*中间状态 透明度为0*!/*/
+    /*}*/
+    /*100% {*/
+        /*opacity: 1; /!*结尾状态 透明度为1*!/*/
+    /*}*/
+/*}*/
+/*.yanimat*/
+/*{-webkit-animation-name: fadeIn; /!*动画名称*!/*/
+    /*-webkit-animation-duration: .3s; /!*动画持续时间*!/*/
+    /*-webkit-animation-iteration-count: 1; /!*动画次数*!/*/
+    /*-webkit-animation-delay: 0s; /!*延迟时间*!/}*/
+/************ companyposition ***********/
+.newbtn{
+  position: fixed;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/******************* postPosition ****************/
+.post-main .postinput{
+  position: absolute;
+  left:88px;
+  top: 8px;
+}
+.post-main .postspan{
+  position: absolute;
+  right: 28px;
+  top: 16px;
+  font-size: 14px;
+  color: #aaa;
+}
+/******************* 忘记密码 ****************/
+/*按钮*/
+.submit a{
+  display: block;
+  padding: .8rem;
+  background: #ddd;
+  width: 100%;
+  border-radius:.2rem ;
+  color:#fff;
+  text-align: center;
+}
+.forgetPwd2 ,.forgetPwd3{
+  padding:2rem 1rem;
+  background: #FAFAFA;
+  overflow: hidden;
+}
+
+.forgetPwd2 .user{
+  margin: 2rem 0 1rem;
+}
+.forgetPwd2 .vcode input{
+  display: inline;
+  background: #fff;
+  padding-left: .5rem;
+  border: 1px solid #ddd;
+}
+.forgetPwd2 .vcode span{
+  margin-left: .8rem;
+  background: #ddd;
+  padding:.52rem 1rem;
+}
+.forgetPwd2 .submit,.forgetPwd3 .submit{
+  margin: 2rem 0;
+}
+.forgetPwd3 input{
+  margin: 1rem 0 .5rem;
+  width: 100%;
+  padding:1.2rem 1rem;
+  border: 1px solid #ddd;
+}
+
+/******************************** search ************************/
+.search .bar{
+  margin: .3rem 0 .6rem;
+}
+.search .bar button.button{
+  background: red;
+  padding: 0 .8rem;
+  border-radius: .4rem;
+  color: #fff;
+}
+.search .page2{
+  /*display: none;*/
+}
+.search .page2 div{
+  margin: 1rem 0;
+}
+.search .page2 div .word{
+  display: inline-block;
+  background: #F3F3F3;
+  padding: .2rem .8rem;
+  border-radius: 1rem;
+  margin-right: .6rem;
+  margin-bottom: .8rem;
+  font-size: .8rem;
+}
+.search .yclean{
+  overflow: hidden;
+}
+.search .yclean>div:nth-child(1){
+  float: left;
+}
+.search .yclean>div:nth-child(2){
+  float: right;
+  margin-right: 2rem;
+}
+.search .page4>ul{
+  overflow: hidden;
+  width: 100%;
+  padding: .8rem;
+}
+.search .page4>ul li{
+  /*width: 33%;*/
+  margin: 0 1rem;
+  text-align: center;
+}
+.search .page4 .content{
+  padding: 0 .2rem;
+}
+.search .page4 .content .VIP_price{
+  margin: 1.2rem 0 .6rem;
+  overflow: hidden;
+}
+
+.search .page4 .content .VIP_price>span i{
+  background: black;
+  color: orange;
+  padding: 0 .3rem;
+  margin-right: .5rem;
+}
+/**/
+.newImg{
+    width: 100%;
+}
+.bg_blue{
+    background: deepskyblue;
+}
+.txtarea{
+    width: 100%;
+    height: 2rem;
+}
+.report{
+    padding-left:.5rem ;
+}
+
+/*第一阶段结果*/
+.yScore_1btns{
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 2rem;
+    border: 1px solid white;
+}
+.yScore_1btns>button{
+    width: 7rem;
+    height: 2rem;
+    float: left;
+}
+.yScore_1btns>button:nth-child(1){
+    margin-left: 4rem;
+    margin-right: 3rem;
+}
+
+
+/* */
+
+/*面试邀请*/
+.yinterview{
+    width: 100%;
+    border: 1px solid white;
+    position: relative;
+    text-align: center;
+}
+.yinterview .ypos{
+    width: 6rem;
+    height: 6rem;
+    left: 38%;
+    border-radius: 50% ;
+    position: absolute;
+    bottom: -1rem;
+    background: grey;
+}
+.news .ycont{
+    width: 100%;
+    background: white;
+    padding-top: 4rem;
+}
+.ycont .ytitle{
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.ycont .ycompany{
+    font-size: 1.3rem;
+    margin-bottom: 4.5rem;
+    text-align: center;
+}
+.news .yflex{
+    display: flex;
+}
+.yflex>div:nth-child(1){
+    flex: 1;
+}
+.yflex>div:nth-child(2){
+    flex: 2;
+}
+.yflex .txt1{
+    padding-left: 2rem;
+}
+.yflex .txt2{
+    padding-right: 2rem;
+}
+.yflex .txt1>p{
+    font-size: 1.2rem;
+    height: 4.5rem;
+}
+.yflex .txt2>p{
+    font-size: 1.2rem;
+    height: 4.5rem;
+}
+.ycont .yjuzhong{
+    text-align: center;
+}
+.yjuzhong .btnsize{
+    border: none;
+    font-size: 1.2rem;
+    width: 85%;
+    border-radius: 10px;
+    margin-bottom: .5rem;
+
+}
+.page5 .ybtn{
+    width: 88%;
+    margin-left: 5%;
+}
+/**/

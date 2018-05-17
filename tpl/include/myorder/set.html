@@ -1,0 +1,26 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">设置</h1>
+</ion-header-bar>
+<ion-content  class="myOrder bg_gray">
+        <ul class="myOrder3 container bg_white">
+            <li ng-click="jump('our')" class="yhq">
+                <div><span>关于我们</span><i class="ion-ios-arrow-right  fr"></i></div>
+            </li>
+            <li ng-click="jump('changePWD')" class="add">
+                <div><span>修改密码</span><i class="ion-ios-arrow-right  fr"></i></div>
+            </li>
+            <li class="jf">
+                <div ng-click="show()"><span>退出登录</span><i class="ion-ios-arrow-right fr"></i></div>
+            </li>
+
+        </ul>
+
+</ion-content>
+<!--弹出框-->
+<div class="model" ng-show = "model_show">
+    <div class="bg_white">
+        <h4>确定退出登录？</h4>
+        <p><a class="white cancel" ng-click="cancel()">取消</a><a class="white bg_red" ng-click="login_out()">确定</a></p>
+    </div>
+</div>

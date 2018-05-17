@@ -1,0 +1,61 @@
+<!--页头-->
+
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">申通快递有限公司</h1>
+</ion-header-bar>
+<ion-content class=" has-header  bg_gray">
+  <!-- 内容-->
+  <main class="companyDetail">
+    <div class="list card">
+      <div class="item item-avatar">
+        <img src="http://www.runoob.com/try/demo_source/mcfly.jpg" style="border-radius: 50%;"/>
+        <h2 style="margin: .5rem  0 0 3rem">京东</h2>
+      </div>
+      <div class="item item-body">
+        <ul class="item-ul">
+          <li>公司性质：民营</li>
+          <li>公司规模：100人</li>
+          <li>所属行业：互联网</li>
+          <li>所在地：北京</li>
+        </ul>
+      </div>
+    </div>
+    <div class="item item-body">
+
+      <div class="place">
+        <h2>公司地址：</h2>
+        <p>
+          <i class="ion-ios-location-outline"></i>
+          <span>郑州市莲花街总部企业基地10号楼5层</span>
+          <i class="ion-ios-arrow-right  fr"></i>
+        </p>
+      </div>
+      <h2>公司简介：</h2>
+      <p style="letter-spacing: 2px;line-height: 20px;">
+        　投资120多万美元自主研制开发的“英联协同翻译及ERP管理平台”，
+        产品包括：国际先进水平的协同翻译平台、REP翻译管理系统、多语种审校系统等。
+        实现了翻译工作的工程化、国际网络化和智能化。
+      </p>
+    </div>
+    <div class="work">
+      <h2 class="center gray">在招职位</h2>
+      <ul class="bg_white" ng-click="jump('workDetail')">
+        <li class="flex_j"><b>人力资源实习生</b><span class="red">2k-4k/月</span></li>
+        <li class="flex_j"><span>郑州-高新区</span><span class="gray">最新</span></li>
+        <li><a>五险一金</a><a>绩效奖金</a></li>
+        <li>申通快递有限公司</li>
+
+      </ul>
+      <ul class="bg_white" ng-click="jump('workDetail')">
+        <li class="flex_j"><b>人力资源实习生</b><span class="red">2k-4k/月</span></li>
+        <li class="flex_j"><span>郑州-高新区</span><span class="gray">最新</span></li>
+        <li><a>五险一金</a><a>绩效奖金</a></li>
+        <li>申通快递有限公司</li>
+      </ul>
+    </div>
+  </main>
+
+</ion-content>
+
+

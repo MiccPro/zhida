@@ -1,0 +1,12 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">帮助与反馈</h1>
+</ion-header-bar>
+<ion-content  class="myOrder bg_gray">
+        <ul class="myOrder3 container bg_white">
+            <li ng-click="jump('helpSon',{id:h.id})" ng-repeat="h in lists">
+                <div><span>{{h.problem}}</span><i class="ion-ios-arrow-right  fr"></i></div>
+            </li>
+        </ul>
+
+</ion-content>

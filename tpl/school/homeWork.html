@@ -1,0 +1,40 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">学生作业</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header bg_gray">
+  <!-- 内容-->
+  <main class="schoolList myStudents">
+    <!--<div class="bar bar-header item-input-inset">-->
+      <!--<label class="item-input-wrapper">-->
+        <!--<i class="icon ion-ios-search placeholder-icon"></i>-->
+        <!--<input type="search" placeholder="搜索">-->
+      <!--</label>-->
+    <!--</div>-->
+    <div class="title bg_white">
+      <ul class="flex_j flex_a container">
+        <li class=" {{homeWorkTabIndex==$index?'active':''}}" ng-click="homeWorkTabChanged($index)" ng-repeat="h in title">
+          {{h}}
+        </li>
+      </ul>
+    </div>
+    <div class="page bg_white flex_a" ng-repeat="h in studentLists | filter:test" ng-click="jump('summarize')">
+         <img ng-src="{{h.image}}">
+         <div class="page2">
+           <div class="flex_j"><h4 class="name">{{h.name}}</h4> <span class="red">{{h.statue}}</span></div>
+           <p class="gray">
+             <span>{{h.banji}}</span>
+           </p>
+         </div>
+
+
+    </div>
+  </main>
+
+
+
+</ion-content>
+
+

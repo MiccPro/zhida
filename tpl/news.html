@@ -1,0 +1,44 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">消息</h1>
+</ion-header-bar>
+<ion-content class="news bg_gray">
+    <ul class="flex_j title bg_white">
+        <li ng-show="role==1||role==3||role==2" ng-class="newsTabIndex==0?'active':''" ng-click="newsTabChanged(0)">全部</li>
+        <li ng-show="role==1" ng-class="newsTabIndex==1?'active':''" ng-click="newsTabChanged(1)">投递反馈</li>
+        <li ng-show="role==1" ng-class="newsTabIndex==2?'active':''" ng-click="newsTabChanged(2)">面试邀请</li>
+        <li ng-show="role==3" ng-class="newsTabIndex==3?'active':''" ng-click="newsTabChanged(3)">接收简历</li>
+        <li ng-show="role==3" ng-class="newsTabIndex==4?'active':''" ng-click="newsTabChanged(4)">邀请反馈</li>
+        <li ng-show="role==2" ng-click="jump('homeWork')">学生作业</li>
+        <li ng-class="newsTabIndex==6?'active':''" ng-click="newsTabChanged(6)">系统消息</li>
+    </ul>
+    <ul class="content ">
+        <li class="ynewslist">
+            <div class="ylistpadding">
+                <div class="ylisttitle">
+                    <div>web前端开发工程师</div>
+                    <div>4k-6k</div>
+                </div>
+                <div class="ycpmpanyname">郑州乐鸟软件科技有限公司</div>
+                <div class="ycompanydel"><span>郑州</span><span>不限</span> </div>
+            </div>
+            <div class="yline"></div>
+            <div class="yliststate red">不合适</div>
+        </li>
+        <li class="ynewslist" ng-click="jump('interview')">
+            <div class="ylistpadding">
+                <div class="ylisttitle">
+                    <div>web前端开发工程师</div>
+                    <div>4k-6k</div>
+                </div>
+                <div class="ycpmpanyname">郑州乐鸟软件科技有限公司</div>
+                <div class="ycompanydel"><span>郑州</span><span>不限</span> </div>
+            </div>
+            <div class="yline"></div>
+            <div class="yliststate red">邀请面试</div>
+        </li>
+    </ul>
+    <div class="no-datas">目前没有收到任何消息</div>
+</ion-content>
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>

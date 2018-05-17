@@ -1,0 +1,165 @@
+
+<ion-content class="main  has-footer">
+    <!--使用ng的slide-box设置轮播-->
+    <ion-slide-box  auto-play="true" does-continue="true" slide-interval="3000"
+                    show-pager="true" pager-click="pageClick(index)">
+        <!--遍历：ng-repeat="img in imgArray-->
+        <ion-slide class="slide item" ng-repeat="img in imgArray">
+            <img ng-src="{{img}}" alt=""/>
+        </ion-slide>
+    </ion-slide-box>
+
+    <!-- 内容-->
+    <main class="bg_gray">
+        <!--1.企业客栈-->
+        <div ng-show="role==1 || role==2" class="company bg_white">
+            <div class="title">
+                企业客栈 <a href="#/companyList" class="fr blue">查看更多 > </a>
+            </div>
+            <ul class="clearfix">
+                <li class="fl center" ng-repeat="h in companyList" ng-if="$index<4" ng-click="jump('companyDetail')">
+                    <img src="{{h.image}}">
+                </li>
+            </ul>
+        </div>
+
+        <!--2.知名院校-->
+        <div class="school bg_white">
+            <div class="title">
+                知名院校   <a href="#/schoolList" class="fr blue">查看更多 > </a>
+            </div>
+            <ul class="clearfix">
+                <li class="fl center" ng-repeat="h in schoolList" ng-if="$index<4" ng-click="jump('detail')">
+                    <img src="{{h.image}}">
+                </li>
+            </ul>
+        </div>
+
+        <!--3.热门职业-->
+        <div ng-show="role==1" class="work bg_white">
+            <div class="title">
+                热门职业
+                <span ng-click="jump('search')" class="fr blue">搜索 |<i class="icon ion-ios-search-strong" style="margin-left: .5rem"></i></span>
+            </div>
+            <ul>
+                <li ng-repeat=" h in workList" ng-click="jump('workDetail')">
+                    <h4>{{h.name}}</h4>
+                    <div class="flex_j">
+                        <span>工作地点：{{h.place}}</span>
+                        <span style="color: red;">招{{h.person}}人</span>
+                    </div>
+                    <div class="flex_j">
+                        <div class="name flex_a">
+                            <img src="img/1.jpg" alt="" style="width: 3rem"/>
+                            <span>{{h.company}}</span>
+                        </div>
+                        <span>{{h.time}}</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+
+        <!--人才推荐-->
+        <h4 ng-show="role==2 || role==3" class="center" style="margin: 1rem 0 ;color:#aaa">人才库</h4>
+        <div ng-show="role==2 || role==3" class="bg_white persons" style="margin-bottom: 0;">
+            <div class="manul">
+                <ul class="maninner">
+                    <li class="lis" ng-class="mainTabIndex==1?'active':''"  ng-click="showClick(1)">
+                        <span>
+                            推荐
+                            <i ng-show="!Mainshow1"  class="ion-ios-arrow-down"></i>
+                            <i ng-show="Mainshow1" class="ion-ios-arrow-up"></i>
+                        </span>
+                        <div ng-show="Mainshow1" class="lisinner onelisinner list">
+                            <ion-list>
+                                <ion-radio ng-model="choice" ng-value="'A'">推荐</ion-radio>
+                                <ion-radio ng-model="choice" ng-value="'B'">最新</ion-radio>
+                            </ion-list>
+                        </div>
+                    </li>
+                    <li class="lis" ng-class="mainTabIndex==2?'active':''" ng-click="showClick(2)">
+                        <span>要求
+                            <i ng-show="!Mainshow2"  class="ion-ios-arrow-down"></i>
+                            <i ng-show="Mainshow2" class="ion-ios-arrow-up"></i>
+                        </span>
+                        <ul ng-show="Mainshow2" class="lisinner seclisinner yanimat">
+                            <li class="lisinners clearfix" >
+                                <p><a>学历</a></p>
+                                <div ng-repeat="h in xueli">
+                                    <span ng-click="dochosXL($index,h)" ng-class="XLindex == $index ?'ylight':''">{{h}}</span>
+                                </div>
+
+                            </li>
+                            <li class="lisinners clearfix">
+                                <p><a>经验</a></p>
+                                <div ng-repeat="h in jingyan">
+                                    <span ng-click="dochosJY($index,h)" ng-class="JYindex == $index ?'ylight':''">{{h}}</span>
+                                </div>
+                            </li>
+                            <li class="lisinners clearfix">
+                                <p><a>薪资</a></p>
+                                <div ng-repeat="h in xinzi">
+                                    <span ng-click="dochosXZ($index,h)" ng-class="XZindex == $index ?'ylight':''">{{h}}</span>
+                                </div>
+                            </li>
+                            <li class="lisinners clearfix">
+                                <p><a>求职意向</a></p>
+                                <div ng-repeat="h in yixiang">
+                                    <span ng-click="dochosYX($index,h)" ng-class="YXindex == $index ?'ylight':''">{{h}}</span>
+                                </div>
+                            </li>
+                            <li>
+                                <button class="button button-full bg_red white" ng-click="doyaoqiu()">
+                                    确认
+                                </button>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="list">
+                <a class="item item-avatar" href="#/resumePreview" style="border-right: none;border-left: none;">
+                    <img src="img/avatar-edit.jpg" >
+                    <div style="margin-left: 48px;position: relative;">
+                        <div class="flex_j">
+                            <strong>张三</strong><span class="red">Web前端</span>
+                        </div>
+                        <p><span class="case">3年 | 本科 | 面议</span></p>
+                    </div>
+                    <p>自学能力强，能保持良好心态，不断学习新知识，以提高自我。</p>
+                </a>
+                <a class="item item-avatar" href="#/resumePreview" style="border-right: none;border-left: none;">
+                    <img src="img/avatar-edit.jpg" >
+                    <div style="margin-left: 48px;position: relative;">
+                        <div class="flex_j">
+                            <strong>张三</strong><span class="red">Web前端</span>
+                        </div>
+                        <p><span class="case">3年 | 本科 | 面议</span></p>
+                    </div>
+                    <p>自学能力强，能保持良好心态，不断学习新知识，以提高自我。</p>
+                </a>
+                <a class="item item-avatar" href="#/resumePreview" style="border-right: none;border-left: none;">
+                    <img src="img/avatar-edit.jpg" >
+                    <div style="margin-left: 48px;position: relative;">
+                        <div class="flex_j">
+                            <strong>张三</strong><span class="red">Web前端</span>
+                        </div>
+                        <p><span class="case">3年 | 本科 | 面议</span></p>
+                    </div>
+                    <p>自学能力强，能保持良好心态，不断学习新知识，以提高自我。</p>
+                </a>
+            </div>
+        </div>
+
+
+    </main>
+
+
+
+</ion-content>
+
+
+<!--页尾-->
+<div ng-include="'tpl/include/footer.html'"></div>
+

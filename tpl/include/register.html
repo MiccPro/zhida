@@ -1,0 +1,43 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">注册</h1>
+</ion-header-bar>
+<ion-content>
+    <div class="list register">
+        <!--novalidate：禁止执行<form>表单原生校验，避免与自己设置的校验方法起冲突-->
+        <form name="registerForm" novalidate>
+            <label class="item item-input" >
+                <span class="input-label">身&nbsp&nbsp&nbsp&nbsp份</span>
+                <select name=""  ng-model="user.role" data-tap-disabled="true">
+                    <option value="">请选择角色</option>
+                    <option value="1">学生</option>
+                    <option value="2">学校</option>
+                    <option value="3">企业</option>
+                </select>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">帐&nbsp&nbsp&nbsp&nbsp号</span>
+                <input type="number" name="account" ng-model="user.account" placeholder="请输入帐号"  required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">密&nbsp&nbsp&nbsp&nbsp码</span>
+                <input type="password" name="pwd" ng-model="user.pwd" placeholder="请输入6-20位密码" ng-pattern="/^[A-Za-z0-9\x21-\x7e]{6,20}$/" required>
+            </label>
+            <label class="item item-input">
+                <span class="input-label">确认密码</span>
+                <input type="password" name="rpwd" ng-model="rpwd" placeholder="请再次输入密码" required>
+            </label>
+            <div class="submit center">
+                <button class="button btn-load white" ui-sref="tabs.mypage" ng-disabled="registerForm.$invalid" ng-click="register()">注册</button>
+                <!--$dirty:字段是否更改，即是否获取焦点、失去焦点；$invalid:字段无效，即有错误-->
+                <!--<span class="usererr assertive" ng-show="registerForm.uname.$dirty && registerForm.uname.$invalid">请输入用户名</span>-->
+                <div class="error">
+                    <span class="usererr assertive" ng-show="registerForm.phone.$dirty && registerForm.phone.$invalid">手机号输入有误</span>
+                    <span class="usererr assertive" ng-show="!registerForm.phone.$invalid && registerForm.pwd.$dirty && registerForm.pwd.$invalid">密码输入格式有误</span>
+                    <span class="usererr assertive" ng-show="!registerForm.phone.$invalid && !registerForm.pwd.$invalid && registerForm.rpwd.$dirty && user.pwd!=rpwd">两次密码输入不一致</span>
+                </div>
+                </div>
+            <p class="center" ng-click="jump('login')">已有帐号去登录</p>
+        </form>
+    </div>
+</ion-content>

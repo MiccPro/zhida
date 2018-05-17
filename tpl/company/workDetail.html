@@ -1,0 +1,51 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">职位详情</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header has-footer bg_gray">
+  <!-- 内容-->
+  <main class="workDetail">
+    <div class="card card-top">
+      <h4 class="flex_j"><span>工程师</span><span class="red">5000-6000元</span></h4>
+      <ul>
+        <li>上海 |</li>
+        <li>大专 |</li>
+        <li>一年以内</li>
+      </ul>
+    </div>
+
+    <div class="row bg_white flex_a flex_j" ng-click="jump('companyDetail')">
+      <div class="col col-25"><img src="img/1.jpg" style="width: 100%"> </div>
+      <div class="col col-60">
+        <p>国家标准报价翻译机构</p>
+        <span class="gray">上市公司 | 100人以上</span>
+      </div>
+      <div class="col"> <i class="ion-ios-arrow-right gray"></i></div>
+    </div>
+
+    <div class="content bg_white">
+      <h4>职位详情：</h4>
+        <p>1、统一认识，强化全员的管理意识。</p>
+        <p> 2、统一全体干部员工的思想认识，深刻把握开展管理提升活动对公司发展的重要意义。 </p>
+        <p> 3、抓住重点，解决制约公司发展的突出问题。 </p>
+      <hr style="margin: 20px 0;"/>
+      <h4>技能要求:</h4>
+      <p>1、统一认识，强化全员的管理意识。</p>
+      <p> 2、统一全体干部员工的思想认识，深刻把握开展管理提升活动对公司发展的重要意义。 </p>
+      <p> 3、抓住重点，解决制约公司发展的突出问题。 </p>
+    </div>
+
+  </main>
+</ion-content>
+<!--页脚-->
+<ion-footer-bar ng-show="role==1" class="bar-footer bar-stable workDetail-footer flex_j flex_a" >
+  <a ng-click="collect()">
+    <i class="ion-ios-star-outline"></i><br/>
+      收藏
+  </a>
+  <a ng-show="sendShow" class="bg_red white" ng-click="sendResume()">投递简历</a>
+  <a ng-show="!sendShow" class="white sended" >已投递</a>
+</ion-footer-bar>
+

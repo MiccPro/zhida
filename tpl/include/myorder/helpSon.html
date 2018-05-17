@@ -1,0 +1,18 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">常见问题解答</h1>
+</ion-header-bar>
+<ion-content class="bg_gray has-header helpSon">
+        <div class="bg_white">
+            <div class="list" ng-repeat="h in lists" ng-show="h.id==id">
+                <div class="item item-divider">
+                    {{h.problem}}
+                </div>
+                <p class="bg_white" >
+                    答：{{h.answer}}
+                </p>
+            </div>
+
+        </div>
+
+</ion-content>

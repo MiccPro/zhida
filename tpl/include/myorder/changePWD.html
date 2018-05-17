@@ -1,0 +1,26 @@
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">修改密码</h1>
+</ion-header-bar>
+<ion-content ng-controller="loginCtrl" class="login">
+    <div class="list">
+        <form name="registerForm" novalidate>
+            <label class="item  item-input">
+                <span class="input-label">原密码</span>
+                <input type="password" name="pwd1" placeholder="请输入原密码" ng-model="user.pwd1" required>
+            </label>
+            <label class="item  item-input">
+                <span class="input-label">新密码</span>
+                <input type="password" name="pwd2" placeholder="请输入新密码" ng-model="user.pwd2" ng-pattern="/^[A-Za-z0-9\x21-\x7e]{6,20}$/" required>
+            </label>
+            <div class="login submit center">
+                <p class="rule" >密码是6-20位数字和英文字母组成</p>
+                <button class="button btn-load white" ui-sref="tabs.mypage" ng-disabled="registerForm.$invalid" ng-click="submit()">提交</button>
+               <div class="error">
+                 <span class="usererr assertive">{{error}}</span>
+                 <span class="usererr assertive" ng-show="!registerForm.pwd1.$invalid && registerForm.pwd2.$dirty && registerForm.pwd2.$invalid">密码输入格式有误</span>
+               </div>
+            </div>
+        </form>
+    </div>
+</ion-content>

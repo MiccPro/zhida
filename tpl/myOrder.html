@@ -1,0 +1,57 @@
+
+<ion-content class="has-footer myOrder bg_gray">
+  <div class="myOrder1 bg_white">
+    <div class="title">
+       <div ng-click="jump('PI')" class="cont cont2" >
+       <!--<div class="cont cont2" >-->
+         <div class="bg_white">
+           <img src="img/btn-tabs_06.png"/>
+         </div>
+         <div><span class="white">张三</span></div>
+       </div>
+    </div>
+  </div>
+  <ul class="myOrder3 container bg_white">
+    <li ng-show="role==1" ng-click="jump('teacher')" class="yhq">
+      <div><span>我的老师</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+    <li ng-show="role==1" ng-click="jump('sendResume')" class="yhq">
+      <div><span>投递记录</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+    <li ng-show="role==1" ng-click="jump('invite')" class="yhq">
+      <div><span>邀请记录</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+    <li ng-show="role==1" ng-click="jump('collect')" class="yhq">
+      <div><span>收藏职位</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+
+    <li ng-show="role==2" ng-click="jump('myStudents')" class="yhq">
+      <div><span>我的学生</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+    <li ng-show="role==2" ng-click="jump('myschool')" class="yhq">
+      <div><span>我的学校</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+    <li ng-show="role==2" ng-click="jump('homeWork')" class="yhq">
+      <div><span>学生作业</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+
+    <li ng-show="role==3" ng-click="jump('companyPosition')" class="yhq">
+      <div><span>职位管理</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+    <li ng-show="role==3" ng-click="jump('myCompany')" class="yhq">
+      <div><span>我的公司</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+
+
+    <li ng-click="jump('help')" class="yhq">
+      <div><span>帮助与反馈</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+    <li ng-click="jump('set')" class="yhq">
+      <div><span>设置</span><i class="ion-ios-arrow-right  fr"></i></div>
+    </li>
+  </ul>
+
+</ion-content>
+
+
+<div ng-include="'tpl/include/footer.html'"></div>

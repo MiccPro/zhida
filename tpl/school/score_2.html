@@ -1,0 +1,27 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+    <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+    <h1 class="title">自我分析报告</h1>
+</ion-header-bar>
+<ion-content class=" has-header">
+    <!-- 内容-->
+    <main class="summarize ">
+        <div class="list" ng-repeat="h in list">
+
+            <div class="item item-divider">
+                {{h.name}}：
+            </div>
+
+            <a class="item" >
+                {{h.result}}
+            </a>
+        </div>
+
+        <div>
+            <h5 class="item item-divider">该生适合做的职位：</h5>
+            <div  class="container">
+                <textarea type="text" ></textarea>
+            </div>
+        </div>
+    </main>
+</ion-content>

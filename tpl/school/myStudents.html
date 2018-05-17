@@ -1,0 +1,58 @@
+<!--页头-->
+<ion-header-bar class="bar-header bar-stable" align-title="center" id="u_header">
+  <button class="button button-icon icon ion-ios-arrow-left" ng-click="backWard()"></button>
+  <h1 class="title">我的学生</h1>
+</ion-header-bar>
+
+<ion-content class=" has-header bg_gray">
+  <!-- 内容-->
+  <main class="schoolList myStudents">
+    <!--<div class="bar bar-header item-input-inset">-->
+      <!--<label class="item-input-wrapper">-->
+        <!--<i class="icon ion-ios-search placeholder-icon"></i>-->
+        <!--<input type="search" placeholder="搜索">-->
+      <!--</label>-->
+    <!--</div>-->
+    <div class="title bg_white">
+      <ul class="flex_j flex_a container">
+        <li>
+          <select name="">
+            <option value="">班级</option>
+            <option value="{{$index+1}}" ng-repeat="h in banji">{{h}}</option>
+          </select>
+        </li>
+        <li>
+          <select name=""  style="width: 6rem">
+            <option value="0">测试阶段</option>
+            <option value="{{$index}}" ng-repeat="h in testPhase">{{h}}</option>
+          </select>
+        </li>
+        <li>
+          <select name=""  style="width: 6rem">
+            <option value="0">全部</option>
+            <option value="1">未审核</option>
+            <option value="2">已审核</option>
+          </select>
+        </li>
+      </ul>
+    </div>
+    <div class="page bg_white flex_a" ng-repeat="h in studentLists" ng-click="jump('studentDetail')">
+         <img ng-src="{{h.image}}">
+         <div class="page2">
+           <div class="flex_j"><h4 class="name">{{h.name}}</h4> <span class="red">审核通过</span></div>
+           <p class="gray">
+             <span>{{h.yuanxi}} |</span>
+             <span>{{h.zhuanye}} |</span>
+             <span>{{h.banji}}</span>
+           </p>
+         </div>
+
+
+    </div>
+  </main>
+
+
+
+</ion-content>
+
+

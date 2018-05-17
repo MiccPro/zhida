@@ -1,0 +1,23 @@
+
+<div class="tabs tabs-icon-top">
+    <a href="#/Main" class="tab-item" ng-class="footerTabIndex==0?'active':''" ng-click="footerTabChanged(0)">
+        <i class="icon ion-home"></i>
+        首页
+    </a>
+    <a href="#/news" class="tab-item" ng-class="footerTabIndex==1?'active':''"  ng-click="footerTabChanged(1)">
+        <i class="icon ion-chatbubble-working"></i>
+        消息
+    </a>
+    <!--<a href="#/resume" class="tab-item" ng-class="footerTabIndex==2?'active':''" ng-click="footerTabChanged(2)">-->
+        <!--<i class="icon ion-document-text"></i>-->
+        <!--简历-->
+    <!--</a>-->
+    <a ng-show="role==1" href="#/course"   class="tab-item" ng-class="footerTabIndex==3?'active':''" ng-click="footerTabChanged(3)">
+        <i class="icon ion-ios-book"></i>
+        课程
+    </a>
+    <a href="#/MyOrder" class="tab-item" ng-class="footerTabIndex==4?'active':''" ng-click="footerTabChanged(4)">
+        <i class="icon ion-person"></i>
+        我的
+    </a>
+</div>
